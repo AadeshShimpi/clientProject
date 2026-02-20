@@ -207,7 +207,7 @@ export default function ProductDetailClient({ product, resolvedParams }: Product
       </div>
 
       {/* Characteristics and Applications Section */}
-      {product.types && product.types.length > 0 && ['Tin Powders', 'Zinc Powders', 'Copper Infiltrants', 'Brass Powders'].includes(product.name) && (
+      {product.types && product.types.length > 0 && ['Tin Powders', 'Zinc Powders', 'Copper Infiltrants', 'Brass Powders', 'Custom Metal Powders'].includes(product.name) && (
         <CharacteristicsSection
           characteristics={product.types[0]?.characteristics}
           applications={product.types[0]?.applications}

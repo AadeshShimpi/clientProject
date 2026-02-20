@@ -302,11 +302,7 @@
             "Purity 99.0% minimum",
             "Apparent density 2.7 g/cm³ to 3.2 g/cm³",
             "Fine to coarse particle size ranges",
-            "Customized size distributions available",
-            "Uniform particle morphology",
-            "Good dispersion properties",
-            "Reliable chemical reactivity",
-            "Consistent quality across batches"
+            "Customized size distributions available"
           ],
           "applications": [
             "Anti-corrosion and zinc-rich coatings",
@@ -314,9 +310,7 @@
             "Chemical and pharmaceutical intermediates",
             "Rubber and plastics compounding",
             "Metallurgical and alloying applications",
-            "Specialty industrial uses",
-            "Corrosion protection systems",
-            "Functional coating applications"
+            "Specialty industrial uses"
           ]
         }
       ]
@@ -434,10 +428,7 @@
             "Particle size range: Fine to coarse grades available",
             "Particle shape: Irregular to sub-angular",
             "Apparent density: Customised as per application",
-            "Flow rate: Customised as per application",
-            "Custom compositions available on request",
-            "Consistent chemical composition",
-            "Reliable flow characteristics"
+            "Custom compositions available on request"
           ],
           "applications": [
             "Powder Metallurgy components",
@@ -467,20 +458,11 @@
             "Particle Size: –100 mesh (< 150 µm)",
             "Typical Apparent Density: ~ 3.0 g/cm³",
             "Form: Pre-lubricated, press-ready powder",
-            "Green Strength: Excellent",
-            "Controlled chemistry",
-            "High purity",
-            "Uniform capillary flow",
-            "Dimensional stability before sintering"
+            "Green Strength: Excellent, ensuring safe handling and dimensional stability before sintering"
           ],
           "applications": [
-            "Powder Metallurgy structural components",
-            "Porous sintered structure infiltration",
-            "Iron-based skeleton infiltration",
-            "Steel-based skeleton infiltration",
-            "Bronze-based skeleton infiltration",
-            "Density enhancement applications",
-            "Strength improvement applications"
+            "Powder Metallurgy",
+            "Structural Components"
           ]
         }
       ]
@@ -494,7 +476,7 @@
       "detailedDescription": "At P.P. Patel Group, we specialize in the development and supply of custom metal powders engineered to meet specific application, processing, and performance requirements. Leveraging our strong metallurgical expertise and advanced powder processing capabilities, we work closely with customers to design powders with tailored chemistry, particle size, morphology, and physical properties.\n\nOur custom solutions support a wide range of industries including Powder Metallurgy Components, Diamond Tools, Friction Materials, Pharmaceutical, Bearings, Filters, and Specialized Industrial Applications, where standard grades may not deliver optimal performance.",
       "types": [
         {
-          "name": "Customized Metal Powder Solutions",
+          "name": "Customized Metal Powders",
           "description": "Custom metal powders engineered with tailored chemistry, particle size, morphology, and physical properties. Leveraging strong metallurgical expertise and advanced processing capabilities to meet specific application requirements.",
           "image": "/images/grades/Custommetalpowder.jpg",
           "characteristics": [
@@ -504,19 +486,7 @@
             "Technology: Water Atomised, Gas Atomised, Electrolytic and Reduced powders",
             "Density, flow, and compressibility optimisation",
             "Pre-lubricated and press-ready grades",
-            "Controlled impurity and oxidation levels",
-            "Tailored morphology options"
-          ],
-          "applications": [
-            "Powder Metallurgy Components",
-            "Diamond Tools",
-            "Friction Materials",
-            "Pharmaceutical applications",
-            "Bearings",
-            "Filters",
-            "Specialized Industrial Applications",
-            "Custom industrial solutions",
-            "High-performance applications"
+            "Controlled impurity and oxidation levels"
           ]
         }
       ]
