@@ -1,0 +1,629 @@
+{
+  "site": {
+    "name": "P.P. Patel Metal Powders Pvt Ltd",
+    "footerName": "P.P. Patel Group",
+    "tagline": "Advanced Materials for Tomorrow",
+    "description": "Specialized metal powder manufacturing company delivering high-quality, application-focused powder solutions to industries across India and international markets"
+  },
+  "hero": {
+    "title": "P.P. Patel Metal Powders Pvt Ltd",
+    "subtitle": "Advanced Materials for Tomorrow",
+    "description": "We are a specialized metal powder manufacturing company committed to delivering high-quality, application-focused powder solutions to industries across India and international markets.",
+    "cta": {
+      "primary": "Get Quote",
+      "secondary": "Learn More"
+    },
+    "image": "/hero-image.jpg"
+  },
+  "features": [
+    {
+      "id": 1,
+      "title": "30+ Years Experience",
+      "description": "Established in 1996, we have grown to become one of the important suppliers for all powder consumers in India.",
+      "icon": "shield"
+    },
+    {
+      "id": 2,
+      "title": "Advanced Technology",
+      "description": "Water Atomised, Air/Gas Atomised, Reduced, and Electrolytic powder production technologies.",
+      "icon": "cog"
+    },
+    {
+      "id": 3,
+      "title": "Quality Assurance",
+      "description": "Stringent quality control systems and continuous process improvement ensure consistent, reliable powders.",
+      "icon": "check"
+    },
+    {
+      "id": 4,
+      "title": "Custom Solutions",
+      "description": "Application-specific grades with customized particle size, chemistry, and physical properties.",
+      "icon": "users"
+    },
+    {
+      "id": 5,
+      "title": "Diverse Applications",
+      "description": "Serving sinter metals, friction materials, welding, pharma, diamond tools, and specialty industrial uses.",
+      "icon": "leaf"
+    },
+    {
+      "id": 6,
+      "title": "Technical Expertise",
+      "description": "Our technical team works closely with customers to develop powders optimized for specific requirements.",
+      "icon": "flask"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Iron and Iron based alloy Powders",
+      "description": "Water atomised iron powder with irregular particle morphology offering excellent compressibility, high green strength, and reliable sintering performance.",
+      "image": "/images/iron-powder.jpg",
+      "categories": ["Plain Iron Powders", "Pre-Alloyed Powders", "Diffusion Bonded Powders", "Premixes"],
+      "detailedDescription": "Water atomised iron powder with irregular particle morphology offering excellent compressibility, high green strength, and reliable sintering performance for powder metallurgy applications.",
+      "types": [
+        {
+          "name": "Plain Iron Powders",
+          "description": "High quality water atomized iron powders designed for various density applications with excellent compressibility and sintering performance.",
+          "image": "/images/grades/ironpowder.jpg",
+          "variants": [
+            {
+              "name": "PHC 100.29",
+              "description": "High compressible water atomized iron powder for medium and high density parts upto 7.00 gm/cc"
+            },
+            {
+              "name": "PSC 100.29",
+              "description": "High compressible water atomized iron powder ideal for high density parts upto 7.20 gm/cc and multi level structural components where strength with good dimensional stability is required"
+            },
+            {
+              "name": "PBC 100.30",
+              "description": "Water atomized iron powder with extra high compressibility used for very high density parts above 7.20 gm/cc. Due to its very low impurity levels this powder can be used for soft magnetic PM applications."
+            },
+            {
+              "name": "PHC 100.26",
+              "description": "High green strength water atomized iron powder for low and medium density parts"
+            },
+            {
+              "name": "PSC 100.25",
+              "description": "High green strength water atomized iron powder for low and medium density parts"
+            },
+            {
+              "name": "PHC 60.29",
+              "description": "High purity atomised iron powder with 60 mesh and 2.90 apparent density mostly used in welding application"
+            },
+            {
+              "name": "PHC 40.29",
+              "description": "High purity atomised iron powder with 40 mesh and 2.90 apparent density mostly used in welding application"
+            },
+            {
+              "name": "PHC 40.37",
+              "description": "High purity atomised iron powder with 40 mesh and 3.70 apparent density mostly used in welding application"
+            }
+          ],
+          "applications": [
+            "Powder Metallurgy (Sintered) Components",
+            "Welding",
+            "Friction materials",
+            "Aluminium Alloying",
+            "Body Warmers",
+            "Cutting tools"
+          ]
+        },
+        {
+          "name": "Pre-Alloyed Powders",
+          "description": "High performance pre-alloyed steel powders engineered for superior strength and dimensional stability in demanding applications.",
+          "image": "/images/grades/ironpowder.jpg",
+          "variants": [
+            {
+              "name": "PSC FeCu20",
+              "description": "80% Iron and 20% pre-alloyed copper with very high strength used for minimizing the risk of copper segregation and achieve high dimensional stability"
+            },
+            {
+              "name": "PSC 0.50Mo",
+              "description": "High compressible pre-alloyed steel powder with 0.50% Mo for high strength and high performance applications and it has wide range of hybrid alloy applications"
+            }
+          ]
+        },
+        {
+          "name": "Diffusion Bonded Powders",
+          "description": "Advanced diffusion bonded powders offering superior strength, toughness, and dimensional consistency for structural PM components.",
+          "image": "/images/grades/ironpowder.jpg",
+          "variants": [
+            {
+              "name": "PSC DAB",
+              "description": "Diffusion bonded powder (Iron- Bal, Cu-1.50%, Ni-1.75%, Mo-0.50%) with high compressibility, high strength, high toughness and good dimensional consistency used for producing structural parts through PM route"
+            },
+            {
+              "name": "PSC DAE",
+              "description": "Diffusion bonded powder (Iron- Bal, Cu-1.50%, Ni-4%, Mo-0.50%) with high compressibility, high strength, high toughness and good dimensional consistency used for producing structural parts through PM route"
+            }
+          ]
+        },
+        {
+          "name": "Premixes",
+          "description": "Pre-mixed iron powder formulations combining iron with alloying elements and lubricants, ready for direct pressing into finished components.",
+          "image": "/images/grades/ironpowder.jpg",
+          "variants": [
+            {
+              "name": "Iron + Copper Premix",
+              "description": "Pre-mixed iron and copper powder formulation for improved sintering performance and strength development"
+            },
+            {
+              "name": "Iron + Graphite Premix",
+              "description": "Pre-mixed iron and graphite composition for steel components with controlled carbon content"
+            },
+            {
+              "name": "Iron + Nickel Premix",
+              "description": "Pre-mixed iron and nickel formulation for enhanced toughness and corrosion resistance"
+            }
+          ],
+          "characteristics": [
+            "Pre-mixed elemental composition",
+            "Consistent alloying distribution",
+            "Ready-to-press formulations",
+            "Reduced mixing time",
+            "Optimized homogeneity",
+            "Cost-effective solutions"
+          ],
+          "applications": [
+            "Direct pressing applications",
+            "High-volume powder metallurgy production",
+            "Automotive components",
+            "Industrial machinery parts",
+            "Structural sintered components",
+            "Cost-sensitive applications"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Copper Powders",
+      "description": "Available through Water Atomisation, Reduction and Electrolytic processes, offering a wide range of particle shapes, sizes, and performance characteristics.",
+      "image": "/images/copperpowder.png",
+      "categories": ["Atomised Copper", "Reduced Copper", "Electrolytic Copper", "Cuprous Oxide"],
+      "detailedDescription": "We make copper powders through Water Atomisation, Reduction and Electrolytic process, offering a wide range of particle shapes, sizes, and performance characteristics to meet diverse industrial applications.",
+      "types": [
+        {
+          "name": "Atomised Copper Powder",
+          "description": "P.P. Patel and Company offers water atomised copper powder with irregular particle morphology, delivering reliable compressibility, consistent sintering performance, and cost-effective solutions for industrial applications.",
+          "image": "/images/grades/copperpowder.jpg",
+          "characteristics": [
+            "Purity >99.0% copper",
+            "Particle sizes 100 mesh (<150 µm) to -325 mesh (<45 µm)",
+            "Apparent density 2.5 g/cm³ to 3.5 g/cm³"
+          ],
+          "applications": [
+            "Powder metallurgy components",
+            "Friction materials (brake pads, clutch facings)",
+            "Welding electrodes and consumables",
+            "Brazing alloys",
+            "General engineering and industrial applications"
+          ]
+        },
+        {
+          "name": "Reduced Copper Powder",
+          "description": "High-purity reduced copper powder with porous irregular particle structure, offering excellent compressibility and green strength for sintering applications.",
+          "image": "/images/grades/copperpowder.jpg",
+          "characteristics": [
+            "Purity >99.0% copper",
+            "Particle sizes 100 mesh (<150 µm) to -325 mesh (<45 µm)",
+            "Apparent density 2 g/cm³ to 3 g/cm³"
+          ],
+          "applications": [
+            "Powder metallurgy components",
+            "Friction materials",
+            "Welding and brazing applications",
+            "Chemical and catalyst applications",
+            "Specialty industrial products"
+          ]
+        },
+        {
+          "name": "Electrolytic Copper Powder",
+          "description": "High-purity electrolytic copper powder with dendritic structure, providing exceptional surface area and electrical conductivity for demanding applications.",
+          "image": "/images/grades/copperpowder.jpg",
+          "characteristics": [
+            "Purity >99.5% copper",
+            "Particle size is typically 325mesh (<45 µm)",
+            "Apparent density 0.8 g/cm³ to 1.5 g/cm³"
+          ],
+          "applications": [
+            "Pharmaceuticals",
+            "Electrical and electronic components",
+            "Conductive pastes and inks",
+            "Carbon brushes",
+            "Friction materials",
+            "Brazing alloys",
+            "Chemical and catalyst applications"
+          ]
+        },
+        {
+          "name": "Cuprous Oxide",
+          "description": "Specialty copper oxide powder for specialized chemical and material applications requiring oxide characteristics.",
+          "image": "/images/grades/copperpowder.jpg",
+          "characteristics": [
+            "Typically > 94% cuprous (Cu2O)",
+            "Particle size -325 mesh (<45 µm)",
+            "Median particle size (D50) 10 µm to 20 µm",
+            "Custom particle sizes ranges available"
+          ],
+          "applications": [
+            "Chemical and catalyst applications",
+            "Ceramic and glass industries",
+            "Antifouling paints and coatings",
+            "Pigments and specialty compounds",
+            "Semiconductor and photovoltaic research"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Tin Powders",
+      "description": "Gas Atomised Tin Powder with spheroidal shape, excellent flowability, and consistent chemical purity for precision-driven applications.",
+      "image": "/images/Tinpowder.png",
+      "categories": [],
+      "detailedDescription": "P. P. Patel and Company manufactures Gas Atomised Tin Powder using advanced inert gas atomisation technology to deliver powders which are spheroidal in shape gives excellent flowability, and consistent chemical purity. The controlled atomisation process minimizes oxidation, ensuring low oxygen content and reliable performance in precision-driven applications.\n\nOur gas atomised tin powders are engineered to meet the stringent requirements of sintered components, electronics, soldering, and specialty industrial applications, where uniform particle size, smooth surface finish, and predictable melting behavior are critical.",
+      "types": [
+        {
+          "name": "Gas Atomised Tin Powder",
+          "description": "Advanced inert gas atomised tin powder with spheroidal particle shape, excellent flowability, and consistent chemical purity. The controlled atomisation process minimizes oxidation, ensuring low oxygen content and reliable performance.",
+          "image": "/images/grades/Tinpowder.jpg",
+          "characteristics": [
+            "Gas Atomized spheroidal particles",
+            "Purity 99.5% minimum",
+            "Apparent density 1.5 g/cm³ to 4.0 g/cm³",
+            "We offers tin powder in fine to coarse particle size ranges, with customized size distributions available based on specific customer and application requirements"
+          ],
+          "applications": [
+            "Precision powder metallurgy applications",
+            "Solder pastes and solder alloys",
+            "Electronic and electrical components",
+            "Thermal spray coatings",
+            "Chemical and specialty industrial uses",
+            "Advanced joining processes and additive manufacturing processes"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Zinc Powders",
+      "description": "High-purity metallic powder for excellent corrosion protection, chemical reactivity, and sacrificial properties.",
+      "image": "/images/Zincpowder.png",
+      "categories": [],
+      "detailedDescription": "Zinc Powder is a high-purity metallic powder widely used for its excellent corrosion protection, chemical reactivity, and sacrificial properties. At P.P. Patel and Company, zinc powder is supplied in controlled particle sizes and consistent quality to meet the requirements of coating, chemical, metallurgical, and industrial applications.\n\nOur zinc powders are engineered to deliver uniform performance, good dispersion, and reliable reactivity, making them suitable for both protective and functional uses.",
+      "types": [
+        {
+          "name": "High-Purity Zinc Powder",
+          "description": "High-purity metallic zinc powder engineered for superior corrosion protection, chemical reactivity, and reliable sacrificial properties. Available in controlled particle sizes with consistent quality for coating, chemical, metallurgical, and industrial applications.",
+          "image": "/images/grades/zincpowdeimage.jpg",
+          "characteristics": [
+            "Purity 99.0% minimum",
+            "Apparent density 2.7 g/cm³ to 3.2 g/cm³",
+            "Fine to coarse particle size ranges",
+            "Customized size distributions available",
+            "Uniform particle morphology",
+            "Good dispersion properties",
+            "Reliable chemical reactivity",
+            "Consistent quality across batches"
+          ],
+          "applications": [
+            "Anti-corrosion and zinc-rich coatings",
+            "Galvanizing and protective paints",
+            "Chemical and pharmaceutical intermediates",
+            "Rubber and plastics compounding",
+            "Metallurgical and alloying applications",
+            "Specialty industrial uses",
+            "Corrosion protection systems",
+            "Functional coating applications"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Bronze Powders",
+      "description": "High-quality Bronze Powders with consistent chemical composition, particle size distribution, and excellent performance across diverse applications.",
+      "image": "/images/Bronzepowder.png",
+      "categories": ["Bronze Powder PB10 92-8", "Bronze Powder PB9 91-9", "Bronze Powder PB7 90-10", "Bronze Powder 85-15"],
+      "detailedDescription": "P. P. Patel and Company offers high-quality Bronze Powders manufactured under strict process control to ensure consistent chemical composition, particle size distribution, and excellent performance across diverse industrial applications.\n\nOur bronze powders are produced using controlled atomization and blending techniques, resulting in powders with uniform morphology, good flowability, and optimized sintering characteristics. These properties make them suitable for both structural and functional applications.",
+      "types": [
+        {
+          "name": "Bronze Powder PB10 92-8",
+          "description": "Bronze Powder PB10 is a diffusion-bonded bronze powder manufactured with a controlled composition of 92% Copper (Cu) and 8% Tin (Sn). The diffusion bonding process ensures excellent chemical homogeneity, uniform tin distribution, and stable sintering behaviour, making it highly suitable for powder metallurgy (PM) applications. Supplied in 100 mesh particle size, offering good flowability, compressibility, and dimensional consistency.",
+          "image": "/images/grades/Bronzepowder.jpg",
+          "characteristics": [
+            "Typically 92% copper and 8% tin",
+            "Diffusion Bonded Powder",
+            "Custom alloy compositions available",
+            "Typical particle size 100 mesh (<150 µm)",
+            "Apparent density 3 g/cm³ to 3.3 g/cm³",
+            "Excellent chemical homogeneity",
+            "Uniform tin distribution",
+            "Stable sintering behaviour"
+          ],
+          "applications": [
+            "Powder Metallurgy structural components",
+            "Wear-resistant PM parts",
+            "Porous and sintered components",
+            "Functional PM applications"
+          ]
+        },
+        {
+          "name": "Bronze Powder PB9 91-9",
+          "description": "PB9 Bronze Powder is a diffusion-bonded bronze powder manufactured with a controlled composition of 91% Copper (Cu) and 9% Tin (Sn). The diffusion bonding process ensures excellent chemical homogeneity, uniform tin distribution, and stable sintering behaviour, making it highly suitable for powder metallurgy (PM) applications. Supplied in 100 mesh particle size with good flowability and compressibility.",
+          "image": "/images/grades/Bronzepowder.jpg",
+          "characteristics": [
+            "Typically 91% copper and 9% tin",
+            "Diffusion Bonded Powder",
+            "Custom alloy compositions available",
+            "Typical particle size 100 mesh (<150 µm)",
+            "Apparent density 3 g/cm³ to 3.3 g/cm³",
+            "Excellent chemical homogeneity",
+            "Uniform tin distribution",
+            "Stable sintering behaviour"
+          ],
+          "applications": [
+            "Powder Metallurgy structural components",
+            "Wear-resistant PM parts",
+            "Porous and sintered components"
+          ]
+        },
+        {
+          "name": "Bronze Powder PB7 90-10",
+          "description": "Bronze Powder PB7 is available in both pre-alloyed and diffusion-bonded forms, with a controlled chemical composition of 90% Copper (Cu) and 10% Tin (Sn). These production routes ensure excellent alloy homogeneity, consistent sintering behaviour, and reliable mechanical performance. Supplied in a particle size range from 100 mesh to 325 mesh, offering flexibility for different applications.",
+          "image": "/images/grades/Bronzepowder.jpg",
+          "characteristics": [
+            "Typically 90% copper and 10% tin",
+            "Available in pre-alloyed and diffusion-bonded grades",
+            "Custom alloy compositions available",
+            "Wide particle size 100 mesh (<150 µm) to 325 mesh (<45 µm)",
+            "Apparent density 2.5 g/cm³ to 3.5 g/cm³",
+            "Excellent alloy homogeneity",
+            "Balanced strength and wear resistance",
+            "Thermal stability"
+          ],
+          "applications": [
+            "Powder Metallurgy structural components",
+            "Diamond tool segments and matrices",
+            "Wear-resistant PM parts",
+            "Porous and sintered components",
+            "High-performance applications"
+          ]
+        },
+        {
+          "name": "Bronze Powder 85-15",
+          "description": "Bronze Powder 85-15 is offered in both pre-alloyed and diffusion-bonded grades, with a controlled chemical composition of 85% Copper (Cu) and 15% Tin (Sn). This higher tin content provides enhanced hardness, wear resistance, and bonding strength, making it particularly suitable for diamond tool applications. Typically supplied in 325 mesh particle size for fine particle distribution.",
+          "image": "/images/grades/Bronzepowder.jpg",
+          "characteristics": [
+            "Typically 85% copper and 15% tin",
+            "Available in pre-alloyed and diffusion-bonded grades",
+            "Custom alloy compositions available",
+            "Typical particle size 325 mesh (<45 µm)",
+            "Apparent density 3 g/cm³ to 3.3 g/cm³",
+            "Enhanced hardness",
+            "Superior wear resistance",
+            "Strong matrix bonding capability",
+            "Uniform alloy homogeneity"
+          ],
+          "applications": [
+            "Diamond tools and segments",
+            "Diamond tool matrices",
+            "Cutting tools",
+            "Grinding applications",
+            "High-performance cutting applications"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Brass Powders",
+      "description": "High-quality copper–zinc alloy powder designed to deliver excellent strength, corrosion resistance, and machinability.",
+      "image": "/images/brasspowder.png",
+      "categories": [],
+      "detailedDescription": "Brass Powder manufactured by P.P.Patel and company is a high-quality copper–zinc alloy powder designed to deliver excellent strength, corrosion resistance, and machinability. Produced under controlled processing conditions, our brass powders ensure consistent chemical composition, uniform particle size distribution, and reliable flow characteristics.",
+      "types": [
+        {
+          "name": "Brass Powder",
+          "description": "High-quality copper-zinc alloy powder engineered for superior strength, corrosion resistance, and machinability. Produced under controlled processing conditions with consistent chemical composition and uniform particle size distribution.",
+          "image": "/images/grades/brasspowder.jpg",
+          "characteristics": [
+            "Copper (Cu): Balance, Zinc (Zn): As per grade requirement",
+            "Particle size range: Fine to coarse grades available",
+            "Particle shape: Irregular to sub-angular",
+            "Apparent density: Customised as per application",
+            "Flow rate: Customised as per application",
+            "Custom compositions available on request",
+            "Consistent chemical composition",
+            "Reliable flow characteristics"
+          ],
+          "applications": [
+            "Powder Metallurgy components",
+            "Diamond Tools",
+            "Friction materials",
+            "Decorative and architectural products",
+            "Electrical and thermal applications",
+            "Filters and porous sintered parts"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Copper Infiltrants",
+      "description": "Specially engineered copper-based powders used to infiltrate porous sintered structures, enhancing density, strength, and mechanical integrity.",
+      "image": "/images/Copperinfiltrants.png",
+      "categories": [],
+      "detailedDescription": "Copper Infiltrants supplied by P.P. Patel and Company are specially engineered copper-based powders used to infiltrate porous sintered structures, significantly enhancing density, strength, thermal conductivity, and mechanical integrity of the final component.\n\nThese infiltrants are manufactured with controlled chemistry, high purity, and optimized particle size distribution, ensuring uniform capillary flow and effective penetration into iron-, steel-, or bronze-based skeletons during the infiltration process.",
+      "types": [
+        {
+          "name": "Copper Infiltrants",
+          "description": "Specially engineered copper-based infiltration powder with controlled chemistry and high purity. Optimized particle size distribution ensures uniform capillary flow and effective penetration into sintered structures.",
+          "image": "/images/grades/copperpowder.jpg",
+          "characteristics": [
+            "Copper Content: Typically > 93% Cu",
+            "Particle Size: –100 mesh (< 150 µm)",
+            "Typical Apparent Density: ~ 3.0 g/cm³",
+            "Form: Pre-lubricated, press-ready powder",
+            "Green Strength: Excellent",
+            "Controlled chemistry",
+            "High purity",
+            "Uniform capillary flow",
+            "Dimensional stability before sintering"
+          ],
+          "applications": [
+            "Powder Metallurgy structural components",
+            "Porous sintered structure infiltration",
+            "Iron-based skeleton infiltration",
+            "Steel-based skeleton infiltration",
+            "Bronze-based skeleton infiltration",
+            "Density enhancement applications",
+            "Strength improvement applications"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Custom Metal Powders",
+      "description": "Custom metal powders engineered to meet specific application, processing, and performance requirements.",
+      "image": "/images/Custompowders.png",
+      "categories": [],
+      "detailedDescription": "At P.P. Patel Group, we specialize in the development and supply of custom metal powders engineered to meet specific application, processing, and performance requirements. Leveraging our strong metallurgical expertise and advanced powder processing capabilities, we work closely with customers to design powders with tailored chemistry, particle size, morphology, and physical properties.\n\nOur custom solutions support a wide range of industries including Powder Metallurgy Components, Diamond Tools, Friction Materials, Pharmaceutical, Bearings, Filters, and Specialized Industrial Applications, where standard grades may not deliver optimal performance.",
+      "types": [
+        {
+          "name": "Customized Metal Powder Solutions",
+          "description": "Custom metal powders engineered with tailored chemistry, particle size, morphology, and physical properties. Leveraging strong metallurgical expertise and advanced processing capabilities to meet specific application requirements.",
+          "image": "/images/grades/Custommetalpowder.jpg",
+          "characteristics": [
+            "Chemical composition tailoring (Cu, Tin, Bronze, Brass, Iron-based & alloy systems)",
+            "Particle size control (micron to mesh ranges)",
+            "Process selection: Pre-alloyed, diffusion-bonded, atomised, reduced, or blended",
+            "Technology: Water Atomised, Gas Atomised, Electrolytic and Reduced powders",
+            "Density, flow, and compressibility optimisation",
+            "Pre-lubricated and press-ready grades",
+            "Controlled impurity and oxidation levels",
+            "Tailored morphology options"
+          ],
+          "applications": [
+            "Powder Metallurgy Components",
+            "Diamond Tools",
+            "Friction Materials",
+            "Pharmaceutical applications",
+            "Bearings",
+            "Filters",
+            "Specialized Industrial Applications",
+            "Custom industrial solutions",
+            "High-performance applications"
+          ]
+        }
+      ]
+    }
+  ],
+  "about": {
+    "title": "About P.P. Patel Group",
+    "description": "P. P. Patel group is diversified into Tobacco, Powder Metallurgy and Construction business. Our metal powder business was established in 1996, we are considerably grown over past 30 years and become one of the important suppliers for all powder consumers in India.",
+    "detailedDescription": "We are a specialized metal powder manufacturing company committed to delivering high-quality, application-focused powder solutions to industries across India and international markets. With deep technical expertise and a strong manufacturing foundation, we cater to diverse sectors including sinter metals, friction materials, welding industry, pharma, diamond tools, chemical applications, and specialty industrial uses.",
+    "companies": [
+      "P.P.Patel and Company (Tobacco Division)",
+      "P.P.Patel and Company (Powder Metallurgy Division)",
+      "Kisan Constructions Pvt Ltd",
+      "P.P.Patel and Company (Renewable Energy Division)",
+      "P P Patel Metal Powders Pvt Ltd"
+    ],
+    "technologies": [
+      {
+        "name": "Water Atomised Powders",
+        "description": "Our Water Atomised Metal Powders are manufactured using a controlled high-pressure water atomisation process involves high-pressure water jets breaking molten metal into fine droplets that solidify rapidly, producing powders with irregular particle morphology, excellent compressibility, and consistent physical and chemical properties.",
+        "characteristics": [
+          "Irregular particle shape for superior green strength and compatibility",
+          "Controlled particle size distribution to meet application-specific requirements",
+          "High Compressibility to achieve higher green and sintered densities at lower press loads",
+          "Stable chemical composition with low variation between batches",
+          "Good flowability and apparent density for consistent processing",
+          "Optimized surface characteristics suitable for sintering and secondary operations"
+        ],
+        "materials": [
+          "Iron and iron-based alloys",
+          "Copper and copper-based powders",
+          "Bronze and specialty alloy grades",
+          "Customized compositions on request"
+        ],
+        "image": "/images/WaterAtomisedPowder.png"
+      },
+      {
+        "name": "Air and Gas Atomised Powders",
+        "description": "Air atomisation uses compressed air as the atomising medium, producing powders with irregular to semi-spherical particle shapes. Gas Atomised Metal Powders are produced by disintegrating a stream of molten metal using high-velocity inert gas jets such as nitrogen or argon, resulting in powders with highly spherical particle morphology.",
+        "characteristics": [
+          "Irregular to sub-angular particle morphology (Air)",
+          "Highly spherical particle shape (Gas)",
+          "Smooth surface morphology",
+          "Excellent flowability and packing density",
+          "Low oxygen content and high purity",
+          "Consistent batch-to-batch quality"
+        ],
+        "materials": [
+          "Tin Powders",
+          "Zinc Powders"
+        ],
+        "image": "/images/air-atomised.jpg"
+      },
+      {
+        "name": "Reduced Powders",
+        "description": "Reduced Metal Powders are produced through a controlled solid-state chemical reduction of metal oxides, resulting in powders with a highly porous, irregular particle structure. This unique morphology provides excellent compressibility, green strength, and sintering performance.",
+        "characteristics": [
+          "Highly irregular and porous particle morphology",
+          "High internal surface area",
+          "Excellent compressibility and green strength",
+          "Lower apparent density compared to atomised powders",
+          "Good sintering activity and inter-particle bonding",
+          "Consistent chemical composition"
+        ],
+        "materials": [
+          "Copper Powders",
+          "Bronze Powders"
+        ],
+        "image": "/images/reduced_bronze.png"
+      },
+      {
+        "name": "Electrolytic Process",
+        "description": "Electrolytic Metal Powders are produced through a controlled electrochemical deposition process, resulting in powders with a highly dendritic, flake-like particle morphology and exceptionally high surface area. These characteristics provide excellent electrical conductivity, reactivity, and bonding behavior.",
+        "characteristics": [
+          "Dendritic and flake-like particle structure",
+          "Very high surface area",
+          "Excellent electrical and thermal conductivity",
+          "High chemical purity",
+          "Superior bonding and sintering behavior",
+          "Controlled particle size distribution"
+        ],
+        "materials": [
+          "Copper powders"
+        ],
+        "image": "/images/electrolytic_copper.png"
+      }
+    ],
+    "approach": "We collaborate closely with customers—from requirement analysis and lab trials to pilot production and full-scale supply—ensuring the custom powder performs exactly as required in your production process.",
+    "values": [
+      "Quality First",
+      "Customer Satisfaction",
+      "Innovation",
+      "Sustainability"
+    ]
+  },
+  "contact": {
+    "email": "marketing@pppatel.com",
+    "phone": "+917020544439/+917722006486",
+    "address": "17B Railway Lines, opposite Railway Hospital, Solapur-413001",
+    "factoryAddress": "Gat No.363, Tamalwadi, Dist.-Osmanabad",
+    "hours": "Monday - Friday: 9:00 AM - 6:00 PM IST",
+    "latitude": 17.6595,
+    "longitude": 75.9244
+  },
+  "social": {
+    "facebook": "https://facebook.com",
+    "linkedin": "https://linkedin.com",
+    "twitter": "https://twitter.com"
+  }
+}
