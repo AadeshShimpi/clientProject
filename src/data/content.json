@@ -65,7 +65,7 @@
         {
           "name": "Plain Iron Powders",
           "description": "High quality water atomized iron powders designed for various density applications with excellent compressibility and sintering performance.",
-          "image": "/images/grades/ironpowder.jpg",
+          "image": "/images/grades/iron-powder-product-image.jpg",
           "variants": [
             {
               "name": "PHC 100.29",
@@ -112,7 +112,7 @@
         {
           "name": "Pre-Alloyed Powders",
           "description": "High performance pre-alloyed steel powders engineered for superior strength and dimensional stability in demanding applications.",
-          "image": "/images/grades/ironpowder.jpg",
+          "image": "/images/grades/iron-powder-product-image.jpg",
           "variants": [
             {
               "name": "PSC FeCu20",
@@ -127,7 +127,7 @@
         {
           "name": "Diffusion Bonded Powders",
           "description": "Advanced diffusion bonded powders offering superior strength, toughness, and dimensional consistency for structural PM components.",
-          "image": "/images/grades/ironpowder.jpg",
+          "image": "/images/grades/iron-powder-product-image.jpg",
           "variants": [
             {
               "name": "PSC DAB",
@@ -142,7 +142,7 @@
         {
           "name": "Premixes",
           "description": "Pre-mixed iron powder formulations combining iron with alloying elements and lubricants, ready for direct pressing into finished components.",
-          "image": "/images/grades/ironpowder.jpg",
+          "image": "/images/grades/iron-powder-product-image.jpg",
           "variants": [
             {
               "name": "Iron + Copper Premix",
@@ -187,7 +187,7 @@
         {
           "name": "Atomised Copper Powder",
           "description": "P.P. Patel and Company offers water atomised copper powder with irregular particle morphology, delivering reliable compressibility, consistent sintering performance, and cost-effective solutions for industrial applications.",
-          "image": "/images/grades/copperpowder.jpg",
+          "image": "/images/grades/copper-powder.jpg",
           "characteristics": [
             "Purity >99.0% copper",
             "Particle sizes 100 mesh (<150 µm) to -325 mesh (<45 µm)",
@@ -204,7 +204,7 @@
         {
           "name": "Reduced Copper Powder",
           "description": "High-purity reduced copper powder with porous irregular particle structure, offering excellent compressibility and green strength for sintering applications.",
-          "image": "/images/grades/copperpowder.jpg",
+          "image": "/images/grades/copper-powder.jpg",
           "characteristics": [
             "Purity >99.0% copper",
             "Particle sizes 100 mesh (<150 µm) to -325 mesh (<45 µm)",
@@ -221,7 +221,7 @@
         {
           "name": "Electrolytic Copper Powder",
           "description": "High-purity electrolytic copper powder with dendritic structure, providing exceptional surface area and electrical conductivity for demanding applications.",
-          "image": "/images/grades/copperpowder.jpg",
+          "image": "/images/grades/copper-powder.jpg",
           "characteristics": [
             "Purity >99.5% copper",
             "Particle size is typically 325mesh (<45 µm)",
@@ -240,7 +240,7 @@
         {
           "name": "Cuprous Oxide",
           "description": "Specialty copper oxide powder for specialized chemical and material applications requiring oxide characteristics.",
-          "image": "/images/grades/copperpowder.jpg",
+          "image": "/images/grades/copper-powder.jpg",
           "characteristics": [
             "Typically > 94% cuprous (Cu2O)",
             "Particle size -325 mesh (<45 µm)",
@@ -326,7 +326,7 @@
         {
           "name": "Bronze Powder PB10 92-8",
           "description": "Bronze Powder PB10 is a diffusion-bonded bronze powder manufactured with a controlled composition of 92% Copper (Cu) and 8% Tin (Sn). The diffusion bonding process ensures excellent chemical homogeneity, uniform tin distribution, and stable sintering behaviour, making it highly suitable for powder metallurgy (PM) applications. Supplied in 100 mesh particle size, offering good flowability, compressibility, and dimensional consistency.",
-          "image": "/images/grades/Bronzepowder.jpg",
+          "image": "/images/grades/copper-powder.jpg",
           "characteristics": [
             "Typically 92% copper and 8% tin",
             "Diffusion Bonded Powder",
@@ -347,7 +347,7 @@
         {
           "name": "Bronze Powder PB9 91-9",
           "description": "PB9 Bronze Powder is a diffusion-bonded bronze powder manufactured with a controlled composition of 91% Copper (Cu) and 9% Tin (Sn). The diffusion bonding process ensures excellent chemical homogeneity, uniform tin distribution, and stable sintering behaviour, making it highly suitable for powder metallurgy (PM) applications. Supplied in 100 mesh particle size with good flowability and compressibility.",
-          "image": "/images/grades/Bronzepowder.jpg",
+          "image": "/images/grades/copper-powder.jpg",
           "characteristics": [
             "Typically 91% copper and 9% tin",
             "Diffusion Bonded Powder",
@@ -367,7 +367,7 @@
         {
           "name": "Bronze Powder PB7 90-10",
           "description": "Bronze Powder PB7 is available in both pre-alloyed and diffusion-bonded forms, with a controlled chemical composition of 90% Copper (Cu) and 10% Tin (Sn). These production routes ensure excellent alloy homogeneity, consistent sintering behaviour, and reliable mechanical performance. Supplied in a particle size range from 100 mesh to 325 mesh, offering flexibility for different applications.",
-          "image": "/images/grades/Bronzepowder.jpg",
+          "image": "/images/grades/copper-powder.jpg",
           "characteristics": [
             "Typically 90% copper and 10% tin",
             "Available in pre-alloyed and diffusion-bonded grades",
@@ -389,7 +389,7 @@
         {
           "name": "Bronze Powder 85-15",
           "description": "Bronze Powder 85-15 is offered in both pre-alloyed and diffusion-bonded grades, with a controlled chemical composition of 85% Copper (Cu) and 15% Tin (Sn). This higher tin content provides enhanced hardness, wear resistance, and bonding strength, making it particularly suitable for diamond tool applications. Typically supplied in 325 mesh particle size for fine particle distribution.",
-          "image": "/images/grades/Bronzepowder.jpg",
+          "image": "/images/grades/copper-powder.jpg",
           "characteristics": [
             "Typically 85% copper and 15% tin",
             "Available in pre-alloyed and diffusion-bonded grades",

@@ -15,6 +15,21 @@ export default function AboutPage() {
 
   const about = content.about;
 
+  const renderCompanyName = (company: string) => {
+    const match = company.match(/^(.*)\s(\([^)]*\))$/);
+    if (!match) {
+      return company;
+    }
+
+    const [, mainName, division] = match;
+    return (
+      <>
+        <span className="block">{mainName}</span>
+        <span className="block">{division}</span>
+      </>
+    );
+  };
+
   return (
     <div className="min-h-screen pt-32 pb-20 bg-gradient-to-b from-slate-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,7 +48,7 @@ export default function AboutPage() {
                   <span className="text-[#d6ccb5] mr-2">About</span>
                   <span>{about.title.replace(/^About\s*/i, '')}</span>
                 </h1>
-                <p className="text-sm sm:text-base md:text-lg text-white/90 leading-relaxed mb-3 sm:mb-4">{about.description}</p>
+                <p className="text-xs sm:text-sm md:text-base text-white/90 leading-relaxed mb-3 sm:mb-4">{about.description}</p>
                 <p className="text-xs sm:text-sm md:text-base text-white/80 leading-relaxed">{about.detailedDescription}</p>
               </div>
             </div>
@@ -66,7 +81,7 @@ export default function AboutPage() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="bg-white rounded-2xl shadow-xl p-8 md:p-12 mb-12 border-2 border-slate-100"
         >
-          <h2 className="text-3xl font-bold text-[#262f68] mb-6">Our Evolution</h2>
+          <h2 className="text-3xl font-bold text-[#262f68] mb-6">P.P.Patel Group</h2>
           <p className="text-lg text-gray-700 mb-6 leading-relaxed">
             Since 1996, the group has expanded its capabilities and now operates through multiple companies serving a wide range of industrial customers.
           </p>
@@ -79,7 +94,7 @@ export default function AboutPage() {
                 transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
                 className="p-6 bg-[#f0f4f8] rounded-xl border border-[#262f68]/20 hover:border-[#262f68] transition-colors"
               >
-                <h3 className="text-xl font-semibold text-gray-900">{company}</h3>
+                <h3 className="text-xl font-semibold text-gray-900">{renderCompanyName(company)}</h3>
               </motion.div>
             ))}
           </div>
