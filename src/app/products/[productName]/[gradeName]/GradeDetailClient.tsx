@@ -53,6 +53,10 @@ export default function GradeDetailClient({ product, grade, resolvedParams }: Gr
   };
 
   const [expandedVariant, setExpandedVariant] = useState<number | null>(null);
+  const isPlainIronPowdersPage = grade?.name?.trim().toLowerCase() === 'plain iron powders';
+  const isIronPremixesPage =
+    product?.name?.trim().toLowerCase() === 'iron and iron based alloy powders' &&
+    grade?.name?.trim().toLowerCase() === 'premixes';
 
   if (!product || !grade) {
     return (
@@ -144,20 +148,22 @@ export default function GradeDetailClient({ product, grade, resolvedParams }: Gr
             </motion.p>
 
             {/* Key Features / Quick Info */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="space-y-3"
-            >
-              <div className="text-center lg:text-left">
-                <p className="text-sm font-semibold text-[#937e4f] uppercase tracking-wide flex items-center justify-center lg:justify-start gap-2">
-                  <CheckCircleIcon className="w-4 h-4" />
-                  Grade Specifications
-                </p>
-                <p className="text-gray-700 mt-1">Complete technical details and applications</p>
-              </div>
-            </motion.div>
+            {!isIronPremixesPage && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="space-y-3"
+              >
+                <div className="text-center lg:text-left">
+                  <p className="text-sm font-semibold text-[#937e4f] uppercase tracking-wide flex items-center justify-center lg:justify-start gap-2">
+                    <CheckCircleIcon className="w-4 h-4" />
+                    Grade Specifications
+                  </p>
+                  <p className="text-gray-700 mt-1">Complete technical details and applications</p>
+                </div>
+              </motion.div>
+            )}
           </motion.div>
 
           {/* Right Side: Image */}
@@ -182,6 +188,48 @@ export default function GradeDetailClient({ product, grade, resolvedParams }: Gr
         </div>
       </div>
 
+      {isIronPremixesPage && (
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="max-w-5xl"
+          >
+            <h2 className="text-3xl font-bold text-[#262f68] mb-6">Premixes Description</h2>
+
+            <p className="text-gray-700 text-lg leading-relaxed mb-8">
+              P.P. Patel Group manufactures high-quality Premix powders designed for consistent performance in powder metallurgy component production. Our premixes are prepared by accurately blending iron powder with required alloying elements, graphite and lubricants in controlled conditions to ensure uniform composition and excellent compressibility.
+            </p>
+
+            <h3 className="text-2xl font-bold text-[#262f68] mb-5">The premix is developed to provide:</h3>
+            <ul className="space-y-4 mb-8">
+              {[
+                'Uniform die filling and smooth compaction',
+                'Stable green strength',
+                'Reduced tool wear',
+                'Controlled dimensional change during sintering',
+                'Consistent mechanical properties in finished components',
+              ].map((point, idx) => (
+                <li key={idx} className="flex items-start gap-3 text-gray-700">
+                  <span className="mt-1.5 h-2.5 w-2.5 rounded-full bg-cyan-400 flex-shrink-0" />
+                  <span className="leading-relaxed">{point}</span>
+                </li>
+              ))}
+            </ul>
+
+            <p className="text-gray-700 text-lg leading-relaxed mb-6">
+              Each batch is processed through calibrated blending systems and tested for flow rate, apparent density, segregation resistance and chemical composition. This ensures repeatability in customer production and reliable sintering behavior.
+            </p>
+
+            <p className="text-[#262f68] font-semibold text-lg leading-relaxed">
+              Custom compositions can be developed based on required density, hardness and strength.
+            </p>
+          </motion.div>
+        </div>
+      )}
+
       {/* Variants Section - Only show if variants exist */}
       {grade.variants && grade.variants.length > 0 && (
         <div className="mb-20 py-16 border-t-2 border-b-2 border-[#d6ccb5]">
@@ -205,7 +253,7 @@ export default function GradeDetailClient({ product, grade, resolvedParams }: Gr
                 <Link
                   key={index}
                   href="/contact"
-                  className="no-underline"
+                  className={`no-underline ${isPlainIronPowdersPage ? 'block h-full' : ''}`}
                   passHref
                 >
                   <motion.div
@@ -213,7 +261,7 @@ export default function GradeDetailClient({ product, grade, resolvedParams }: Gr
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="cursor-pointer bg-gradient-to-br from-white via-slate-50 to-[#f9f7f4] rounded-2xl p-8 shadow-lg border-2 border-[#d6ccb5] hover:border-[#937e4f] transition-all"
+                    className={`cursor-pointer bg-gradient-to-br from-white via-slate-50 to-[#f9f7f4] rounded-2xl p-8 shadow-lg border-2 border-[#d6ccb5] hover:border-[#937e4f] transition-all ${isPlainIronPowdersPage ? 'h-full flex flex-col' : ''}`}
                   >
                     <h3 className="text-2xl font-bold text-[#262f68] mb-4">
                       {variant.name}

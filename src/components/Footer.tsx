@@ -37,27 +37,28 @@ export default function Footer() {
 
   return (
     <motion.footer
-      className="bg-[#262f68] text-white py-12"
+      className="bg-[#262f68] text-white pt-14 pb-10"
+      style={{ fontFamily: 'Outfit, sans-serif' }}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.15 }}
       variants={containerVariants}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div className="grid grid-cols-1 md:grid-cols-4 gap-8" variants={containerVariants}>
+        <motion.div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-8" variants={containerVariants}>
           {/* Company Info */}
-          <motion.div variants={itemVariants}>
-            <h3 className="text-2xl font-bold mb-4 text-white">
+          <motion.div variants={itemVariants} className="md:col-span-5">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white leading-tight">
               {site.footerName}
             </h3>
-            <p className='text-gray-300 font-bold mb-2'>We are ISO 9001:2015 Certified</p>
-            <p className="text-gray-300">{site.description}</p>
+            <p className="text-[#d6ccb5] font-semibold mb-3">We are ISO 9001:2015 Certified</p>
+            <p className="text-gray-300 leading-relaxed max-w-xl">{site.description}</p>
           </motion.div>
 
           {/* Quick Links */}
-          <motion.div variants={itemVariants}>
-            <h4 className="text-lg font-semibold mb-4 text-white">Quick Links</h4>
-            <ul className="space-y-2">
+          <motion.div variants={itemVariants} className="md:col-span-2">
+            <h4 className="text-sm font-semibold mb-4 text-[#d6ccb5] uppercase tracking-wider">Quick Links</h4>
+            <ul className="space-y-3">
               <li>
                 <Link href="/" className="text-gray-300 hover:text-white transition-colors">
                   Home
@@ -82,27 +83,42 @@ export default function Footer() {
           </motion.div>
 
           {/* Contact Info */}
-          <motion.div variants={itemVariants}>
-            <h4 className="text-lg font-semibold mb-4 text-white">Contact</h4>
-            <ul className="space-y-3 text-gray-300">
-              <li className="flex items-center">
-                <HiMail className="w-4 h-4 mr-2 text-white" />
-                {contact.email}
+          <motion.div variants={itemVariants} className="md:col-span-3">
+            <h4 className="text-sm font-semibold mb-4 text-[#d6ccb5] uppercase tracking-wider">Contact</h4>
+            <ul className="space-y-4 text-gray-300">
+              <li className="flex items-start">
+                <div className="h-8 w-8 rounded-lg bg-slate-700/70 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
+                  <HiMail className="w-4 h-4 text-white" />
+                </div>
+                <div className="flex flex-col text-sm">
+                  <a href="mailto:akshay@pppatel.co.in" className="hover:text-white transition-colors">
+                    akshay@pppatel.co.in
+                  </a>
+                  <a href="mailto:marketing@pppatel.com" className="hover:text-white transition-colors">
+                    marketing@pppatel.com
+                  </a>
+                </div>
               </li>
-              <li className="flex items-center">
-                <HiPhone className="w-4 h-4 mr-2 text-white" />
-                {contact.phone}
+              <li className="flex items-start">
+                <div className="h-8 w-8 rounded-lg bg-slate-700/70 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
+                  <HiPhone className="w-4 h-4 text-white" />
+                </div>
+                <a href={`tel:${contact.phone}`} className="text-sm hover:text-white transition-colors">
+                  {contact.phone}
+                </a>
               </li>
               <li className="flex items-start text-sm">
-                <HiLocationMarker className="w-4 h-4 mr-2 text-white mt-1 flex-shrink-0" />
-                {contact.address}
+                <div className="h-8 w-8 rounded-lg bg-slate-700/70 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
+                  <HiLocationMarker className="w-4 h-4 text-white" />
+                </div>
+                <span className="leading-relaxed">{contact.address}</span>
               </li>
             </ul>
           </motion.div>
 
           {/* Social Media */}
-          <motion.div variants={itemVariants}>
-            <h4 className="text-lg font-semibold mb-4 text-white">Follow Us</h4>
+          <motion.div variants={itemVariants} className="md:col-span-2">
+            <h4 className="text-sm font-semibold mb-4 text-[#d6ccb5] uppercase tracking-wider">Follow Us</h4>
             <div className="flex space-x-4">
               <motion.a
                 href={social.facebook}
@@ -110,7 +126,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.12, y: -2 }}
                 whileTap={{ scale: 0.95 }}
-                className="p-3 bg-slate-700 rounded-lg text-gray-300 hover:text-white hover:bg-[#262f68] transition-all"
+                className="p-3 bg-slate-700/80 rounded-lg text-gray-300 hover:text-white hover:bg-slate-600 transition-all"
                 aria-label="Facebook"
               >
                 <FaFacebook className="w-5 h-5" />
@@ -121,7 +137,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.12, y: -2 }}
                 whileTap={{ scale: 0.95 }}
-                className="p-3 bg-slate-700 rounded-lg text-gray-300 hover:text-white hover:bg-[#262f68] transition-all"
+                className="p-3 bg-slate-700/80 rounded-lg text-gray-300 hover:text-white hover:bg-slate-600 transition-all"
                 aria-label="LinkedIn"
               >
                 <FaLinkedin className="w-5 h-5" />
@@ -132,7 +148,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.12, y: -2 }}
                 whileTap={{ scale: 0.95 }}
-                className="p-3 bg-slate-700 rounded-lg text-gray-300 hover:text-white hover:bg-[#262f68] transition-all"
+                className="p-3 bg-slate-700/80 rounded-lg text-gray-300 hover:text-white hover:bg-slate-600 transition-all"
                 aria-label="Twitter"
               >
                 <FaTwitter className="w-5 h-5" />
@@ -141,7 +157,7 @@ export default function Footer() {
           </motion.div>
         </motion.div>
 
-        <motion.div className="border-t border-slate-700 mt-8 pt-8 text-center text-gray-300" variants={itemVariants}>
+        <motion.div className="border-t border-slate-700/80 mt-10 pt-6 text-center text-sm text-gray-300" variants={itemVariants}>
           <p>&copy; {new Date().getFullYear()} {site.footerName}. All rights reserved.</p>
         </motion.div>
       </div>

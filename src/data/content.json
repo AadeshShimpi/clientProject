@@ -142,37 +142,7 @@
         {
           "name": "Premixes",
           "description": "Pre-mixed iron powder formulations combining iron with alloying elements and lubricants, ready for direct pressing into finished components.",
-          "image": "/images/grades/iron-powder-product-image.jpg",
-          "variants": [
-            {
-              "name": "Iron + Copper Premix",
-              "description": "Pre-mixed iron and copper powder formulation for improved sintering performance and strength development"
-            },
-            {
-              "name": "Iron + Graphite Premix",
-              "description": "Pre-mixed iron and graphite composition for steel components with controlled carbon content"
-            },
-            {
-              "name": "Iron + Nickel Premix",
-              "description": "Pre-mixed iron and nickel formulation for enhanced toughness and corrosion resistance"
-            }
-          ],
-          "characteristics": [
-            "Pre-mixed elemental composition",
-            "Consistent alloying distribution",
-            "Ready-to-press formulations",
-            "Reduced mixing time",
-            "Optimized homogeneity",
-            "Cost-effective solutions"
-          ],
-          "applications": [
-            "Direct pressing applications",
-            "High-volume powder metallurgy production",
-            "Automotive components",
-            "Industrial machinery parts",
-            "Structural sintered components",
-            "Cost-sensitive applications"
-          ]
+          "image": "/images/grades/iron-powder-product-image.jpg"
         }
       ]
     },
@@ -524,15 +494,15 @@
         "image": "/images/WaterAtomisedPowder.png"
       },
       {
-        "name": "Air and Gas Atomised Powders",
-        "description": "Air atomisation uses compressed air as the atomising medium, producing powders with irregular to semi-spherical particle shapes. Gas Atomised Metal Powders are produced by disintegrating a stream of molten metal using high-velocity inert gas jets such as nitrogen or argon, resulting in powders with highly spherical particle morphology.",
+        "name": "Air Atomised Powders",
+        "description": "P.P. Patel Group produces air atomised metal powders by disintegrating molten metal using high-pressure compressed air. The process forms irregular to semi-spherical particles that provide good inter-particle bonding and higher green strength during compaction.\n\nThe powders offer reliable die filling, consistent chemical composition and stable performance during sintering, making them suitable for conventional powder metallurgy applications.",
         "characteristics": [
-          "Irregular to sub-angular particle morphology (Air)",
-          "Highly spherical particle shape (Gas)",
-          "Smooth surface morphology",
-          "Excellent flowability and packing density",
-          "Low oxygen content and high purity",
-          "Consistent batch-to-batch quality"
+          "Irregular to sub-angular particle morphology",
+          "Good green strength during compaction",
+          "Stable dimensional control after sintering",
+          "Reliable flow and die filling characteristics",
+          "Consistent batch-to-batch quality",
+          "Suitable for conventional powder metallurgy processing"
         ],
         "materials": [
           "Tin Powders",
@@ -584,10 +554,10 @@
   },
   "contact": {
     "email": "marketing@pppatel.com",
-    "phone": "+917020544439/+917722006486",
+    "phone": "+91-7722006486/+91-7020544439",
     "address": "17B Railway Lines, opposite Railway Hospital, Solapur-413001",
-    "factoryAddress": "Gat No.363, Tamalwadi, Dist.-Osmanabad",
-    "hours": "Monday - Friday: 9:00 AM - 6:00 PM IST",
+    "factoryAddress": "Gat No.363, Tamalwadi, Dist.-Dharashiv,Maharashtra, India - 413623",
+    "hours": "Monday - Saturday: 9:00 AM - 6:00 PM IST",
     "latitude": 17.6595,
     "longitude": 75.9244
   },

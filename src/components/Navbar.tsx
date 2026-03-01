@@ -94,7 +94,7 @@ export default function Navbar() {
                         whileTap={{ scale: 0.95 }}
                         className="px-4 py-2 text-gray-700 font-light text-base tracking-wide transition-all duration-300 relative hover:text-[#262f68] cursor-pointer" style={{ fontFamily: 'Outfit, sans-serif', fontSize: '16px', fontWeight: 300 }}
                       >
-                        <span className="inline-flex items-center gap-2 text-sm">
+                        <span className="inline-flex items-center gap-2">
                           {link.name}
                           <svg
                             className={`w-4 h-4 text-gray-500 transition-transform duration-200 ${isProductDropdownOpen ? 'rotate-180' : ''}`}
@@ -164,7 +164,7 @@ export default function Navbar() {
                         whileTap={{ scale: 0.95 }}
                         className="px-4 py-2 text-gray-700 font-light text-base tracking-wide transition-all duration-300 relative hover:text-[#262f68] cursor-pointer" style={{ fontFamily: 'Outfit, sans-serif', fontSize: '16px', fontWeight: 300 }}
                       >
-                        <span className="inline-flex items-center gap-2 text-sm">
+                        <span className="inline-flex items-center gap-2">
                           {link.name}
                           <svg
                             className={`w-4 h-4 text-gray-500 transition-transform duration-200 ${isApplicationDropdownOpen ? 'rotate-180' : ''}`}

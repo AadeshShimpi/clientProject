@@ -97,6 +97,7 @@ export default function ContactPage() {
   }, []);
 
   const contact = content.contact;
+  const mapLocationQuery = 'RXF8+G3, Gangewadi, Maharashtra 413002';
 
   return (
     <div className="min-h-screen pt-32 pb-20 bg-white">
@@ -235,9 +236,14 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-slate-900 mb-1">Email</h3>
-                    <a href={`mailto:${contact.email}`} className="text-[#262f68] hover:underline">
-                      {contact.email}
-                    </a>
+                    <div className="flex flex-col gap-1">
+                      <a href="mailto:akshay@pppatel.co.in" className="text-[#262f68] hover:underline">
+                        akshay@pppatel.co.in
+                      </a>
+                      <a href="mailto:marketing@pppatel.com" className="text-[#262f68] hover:underline">
+                        marketing@pppatel.com
+                      </a>
+                    </div>
                   </div>
                 </motion.div>
                 <motion.div 
@@ -264,7 +270,7 @@ export default function ContactPage() {
                     <HiLocationMarker className="w-6 h-6 text-[#262f68]" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-slate-900 mb-1">Address</h3>
+                    <h3 className="font-semibold text-slate-900 mb-1">Office Address</h3>
                     <p className="text-gray-700">{contact.address}</p>
                   </div>
                 </motion.div>
@@ -339,7 +345,7 @@ export default function ContactPage() {
               height="500"
               frameBorder="0"
               style={{ border: 0, borderRadius: '0.75rem' }}
-              src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3760.0123456789!2d${contact.longitude}!3d${contact.latitude}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0!2s${encodeURIComponent(contact.address)}!5e0!3m2!1sen!2sin!4v1234567890`}
+              src={`https://www.google.com/maps?q=${encodeURIComponent(mapLocationQuery)}&output=embed`}
               allowFullScreen={true}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

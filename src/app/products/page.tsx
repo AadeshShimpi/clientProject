@@ -5,7 +5,6 @@ import { motion } from 'framer-motion';
 import { getContent } from '@/lib/content';
 import contentData from '@/data/content.json';
 import ProductCarousel from '@/components/ProductCarousel';
-import FallbackImage from '@/components/FallbackImage';
 
 export default function ProductsPage() {
   const [content, setContent] = useState(contentData);
@@ -18,8 +17,8 @@ export default function ProductsPage() {
 
   return (
     <div className="min-h-screen pt-20 pb-20 bg-white">
-      {/* Product Carousel */}
-      <div className="w-full h-[75vh] md:h-[85vh] -mt-0 grid grid-cols-1 md:grid-cols-2 overflow-hidden">
+      {/* Header Section with Background Image and theme color */}
+      <div className="w-full h-[75vh] md:h-[85vh] grid grid-cols-1 md:grid-cols-2 overflow-hidden">
         <div className="flex items-center p-8 md:p-12 bg-[#262f68]">
           <div className="max-w-2xl">
             <motion.h1
@@ -35,18 +34,17 @@ export default function ProductsPage() {
         </div>
 
         <div className="relative w-full h-full">
-          <FallbackImage
-            src="/images/productspage.jpg"
+          <img
+            src="/images/productspage.png"
             alt="Our Products"
-            fill
-            priority
-            fallbackColor="bg-gradient-to-br from-[#1e2a5f] to-[#2d3a7a]"
-            fallbackText="Our Products"
-            className="object-cover"
+            className="absolute inset-0 w-full h-full object-cover object-center"
+            loading="eager"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-black/20"></div>
         </div>
       </div>
+
       <ProductCarousel products={products} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
