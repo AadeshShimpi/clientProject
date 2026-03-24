@@ -11,5 +11,10 @@ export default async function ApplicationPage({ params }: { params: Promise<{ sl
   const app = getApplicationBySlug(slug);
   if (!app) return notFound();
 
-  return <ApplicationDetailClient app={app} />;
+  const appForClient = {
+    ...app,
+    products: app.products ?? [],
+  };
+
+  return <ApplicationDetailClient app={appForClient} />;
 }

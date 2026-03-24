@@ -21,8 +21,8 @@ interface GradeType {
   description: string;
   image?: string;
   variants?: GradeVariant[];
-  characteristics: string[];
-  applications: string[];
+  characteristics?: string[];
+  applications?: string[];
 }
 
 interface Product {

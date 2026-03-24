@@ -14,8 +14,8 @@ interface Product {
   types?: {
     name: string;
     description: string;
-    characteristics: string[];
-    applications: string[];
+    characteristics?: string[];
+    applications?: string[];
     image?: string;
     variants?: { name: string; description?: string }[];
   }[];
