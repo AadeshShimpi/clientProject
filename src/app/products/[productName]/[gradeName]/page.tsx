@@ -8,35 +8,20 @@ interface GradeDetailPageProps {
   }>;
 }
 
-interface Product {
-  id: number;
-  name: string;
-  description: string;
-  detailedDescription?: string;
-  image: string;
-  categories?: string[];
-  types?: {
-    name: string;
-    description: string;
-    variants?: {
-      name: string;
-      description: string;
-    }[];
-    characteristics: string[];
-    applications: string[];
-  }[];
-}
+type GradeDetailClientProps = React.ComponentProps<typeof GradeDetailClient>;
+type ProductProp = GradeDetailClientProps['product'];
+type GradeProp = GradeDetailClientProps['grade'];
 
 // Generate static params for static export
 export async function generateStaticParams() {
-  const params: any[] = [];
+  const params: { productName: string; gradeName: string }[] = [];
   
-  contentData.products.forEach((product: Product) => {
+  contentData.products.forEach((product) => {
     if (product.types && product.types.length > 0) {
       product.types.forEach((type) => {
         params.push({
-          productName: encodeURIComponent(product.name),
-          gradeName: encodeURIComponent(type.name),
+          productName: product.name,
+          gradeName: type.name,
         });
       });
     }
@@ -45,22 +30,30 @@ export async function generateStaticParams() {
   return params;
 }
 
+function safeDecodeURIComponent(value: string) {
+  try {
+    return decodeURIComponent(value);
+  } catch {
+    return value;
+  }
+}
+
 export default async function GradeDetailPage({ params }: GradeDetailPageProps) {
   const resolvedParams = await params;
   
-  // URL parameters come in encoded, decode them for matching
-  const productName = decodeURIComponent(resolvedParams.productName);
-  const gradeName = decodeURIComponent(resolvedParams.gradeName);
+  // Decode route params before matching data
+  const productName = safeDecodeURIComponent(resolvedParams.productName);
+  const gradeName = safeDecodeURIComponent(resolvedParams.gradeName);
   
   // Find the product by name
   const product = contentData.products.find(
-    (p: Product) => p.name.toLowerCase() === productName.toLowerCase()
-  ) as Product | undefined;
+    (p) => p.name.toLowerCase() === productName.toLowerCase()
+  ) as ProductProp;
 
   // Find the grade/type within the product
   const grade = product?.types?.find(
     (t) => t.name.toLowerCase() === gradeName.toLowerCase()
-  );
+  ) as GradeProp;
 
   return <GradeDetailClient product={product} grade={grade} resolvedParams={resolvedParams} />;
 }

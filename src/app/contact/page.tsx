@@ -1,8 +1,8 @@
 'use client';
 
+
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import emailjs from '@emailjs/browser';
 import { getContent } from '@/lib/content';
 import contentData from '@/data/content.json';
 import { 
@@ -13,10 +13,10 @@ import {
   HiCheckCircle
 } from 'react-icons/hi';
 
-// Initialize EmailJS (FREE SERVICE - No backend needed)
-emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || '');
+
 
 export default function ContactPage() {
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -26,68 +26,79 @@ export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const [showToast, setShowToast] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError('');
+    setError("");
 
     // Validation
     if (!formData.name.trim()) {
-      setError('Name is required');
+      setError("Name is required");
       return;
     }
-
     if (!formData.email.trim()) {
-      setError('Email is required');
+      setError("Email is required");
       return;
     }
-
     // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
-      setError('Please provide a valid email address');
+      setError("Please provide a valid email address");
       return;
     }
-
     if (!formData.phone.trim()) {
-      setError('Phone number is required');
+      setError("Phone number is required");
       return;
     }
 
     setLoading(true);
 
-    try {
-      // Send using EmailJS (no backend needed)
-      const result = await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || '',
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || '',
-        {
-          to_email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'shimpiaadesh14@gmail.com',
-          from_email: formData.email,
-          from_name: formData.name,
-          phone: formData.phone,
-          message: formData.message || 'No message provided',
-          reply_to: formData.email,
+    // Send to both emails using two API calls
+    const emails = [
+      "akshay@pppatel.co.in",
+      "marketing@pppatel.com"
+    ];
+    let allSuccess = true;
+    let lastError = "";
+    for (const email of emails) {
+      try {
+        const response = await fetch(`https://formsubmit.co/ajax/${email}`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            message: formData.message,
+          }),
+        });
+        const data = await response.json();
+        if (!(data.success === "true" || data.success === true)) {
+          allSuccess = false;
+          lastError = data.message || "Failed to send message. Please try again.";
         }
-      );
-
-      if (result.status === 200) {
-        setSubmitted(true);
-        setFormData({ name: '', email: '', phone: '', message: '' });
-        setLoading(false);
-
-        setTimeout(() => {
-          setSubmitted(false);
-        }, 5000);
-      } else {
-        setError('Failed to send message. Please try again.');
-        setLoading(false);
+      } catch (err) {
+        allSuccess = false;
+        lastError = "Failed to send message. Please try again later.";
       }
-    } catch (err) {
-      console.error('Error sending message:', err);
-      setError('Failed to send message. Please try again later.');
-      setLoading(false);
     }
+
+    if (allSuccess) {
+      setSubmitted(true);
+      setShowToast(true);
+      setFormData({ name: "", email: "", phone: "", message: "" });
+      setTimeout(() => {
+        setSubmitted(false);
+        setShowToast(false);
+      }, 4000);
+    } else {
+      setError(lastError);
+    }
+    setLoading(false);
   };
 
   const [content, setContent] = useState(contentData);
@@ -142,8 +153,9 @@ export default function ContactPage() {
                 </div>
               )}
 
-              {submitted && (
-                <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg flex items-center gap-2">
+              {/* Toast message for success */}
+              {showToast && (
+                <div className="fixed top-6 right-6 z-50 bg-green-500 text-white px-6 py-4 rounded-lg shadow-lg flex items-center gap-2 animate-fade-in">
                   <span className="text-xl">✓</span>
                   <span>Thank you! We've received your message and will get back to you soon.</span>
                 </div>
@@ -155,11 +167,12 @@ export default function ContactPage() {
                 </label>
                 <input
                   type="text"
+                  name="name"
                   required
                   value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  onChange={e => setFormData({ ...formData, name: e.target.value })}
                   className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#262f68] focus:border-transparent"
-                  placeholder="Your name"
+                  placeholder="Your Name"
                 />
               </div>
               <div>
@@ -168,9 +181,10 @@ export default function ContactPage() {
                 </label>
                 <input
                   type="email"
+                  name="email"
                   required
                   value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  onChange={e => setFormData({ ...formData, email: e.target.value })}
                   className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#262f68] focus:border-transparent"
                   placeholder="your.email@example.com"
                 />
@@ -181,9 +195,10 @@ export default function ContactPage() {
                 </label>
                 <input
                   type="tel"
+                  name="phone"
                   required
                   value={formData.phone}
-                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                  onChange={e => setFormData({ ...formData, phone: e.target.value })}
                   className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#262f68] focus:border-transparent"
                   placeholder="+91-XXXXXXXXXX"
                 />
@@ -193,9 +208,10 @@ export default function ContactPage() {
                   Message
                 </label>
                 <textarea
+                  name="message"
                   rows={6}
                   value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  onChange={e => setFormData({ ...formData, message: e.target.value })}
                   className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#262f68] focus:border-transparent"
                   placeholder="Your message (optional)"
                 />

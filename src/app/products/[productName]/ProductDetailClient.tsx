@@ -18,8 +18,8 @@ interface ProductType {
   name: string;
   description: string;
   image?: string;
-  characteristics: string[];
-  applications: string[];
+  characteristics?: string[];
+  applications?: string[];
 }
 
 interface Product {
@@ -52,7 +52,7 @@ export default function ProductDetailClient({ product, resolvedParams }: Product
   };
 
   // Get related products
-  const relatedProducts = product ? contentData.products.filter((p: Product) => p.id !== product.id) : [];
+  const relatedProducts = product ? contentData.products.filter((p) => p.id !== product.id) : [];
   const itemsPerPage = 3;
   const totalPages = relatedProducts.length > 0 ? Math.ceil(relatedProducts.length / itemsPerPage) : 1;
   const currentProducts = relatedProducts.slice(
@@ -304,7 +304,7 @@ export default function ProductDetailClient({ product, resolvedParams }: Product
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
           >
-            {currentProducts.map((relatedProduct: Product, index: number) => {
+            {currentProducts.map((relatedProduct, index) => {
               return (
                 <Link 
                   key={relatedProduct.id}

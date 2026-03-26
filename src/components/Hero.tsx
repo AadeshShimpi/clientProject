@@ -619,5 +619,26 @@ export function SocialMediaBar() {
     { icon: FaYoutube, url: '#', label: 'YouTube' },
   ];
 
+  return (
+    <div className="flex justify-center gap-4 py-3 bg-slate-900">
+      {socialLinks.map((social, index) => {
+        const Icon = social.icon;
+        return (
+          <motion.a
+            key={index}
+            href={social.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.15, y: -3 }}
+            whileTap={{ scale: 0.9 }}
+            className="w-10 h-10 rounded-full bg-cyan-400 flex items-center justify-center text-slate-900 shadow-lg hover:shadow-xl transition-shadow"
+            aria-label={social.label}
+          >
+            <Icon className="w-5 h-5" />
+          </motion.a>
+        );
+      })}
+    </div>
+  );
 }
 

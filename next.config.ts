@@ -7,6 +7,10 @@ const nextConfig: NextConfig = {
   },
   // Trailing slash for better static hosting compatibility
   trailingSlash: true,
+  // Add environment variable for static export
+  env: {
+    NEXT_PUBLIC_STATIC_EXPORT: 'true',
+  },
 };
 
 export default nextConfig;

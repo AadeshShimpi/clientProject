@@ -7,38 +7,33 @@ interface ProductDetailPageProps {
   }>;
 }
 
-interface Product {
-  id: number;
-  name: string;
-  description: string;
-  detailedDescription?: string;
-  image: string;
-  categories?: string[];
-  types?: {
-    name: string;
-    description: string;
-    characteristics: string[];
-    applications: string[];
-  }[];
-}
+type ProductProp = React.ComponentProps<typeof ProductDetailClient>['product'];
 
 // Generate static params for static export
 export async function generateStaticParams() {
   return contentData.products.map((product) => ({
-    productName: encodeURIComponent(product.name),
+    productName: product.name,
   }));
+}
+
+function safeDecodeURIComponent(value: string) {
+  try {
+    return decodeURIComponent(value);
+  } catch {
+    return value;
+  }
 }
 
 export default async function ProductDetailPage({ params }: ProductDetailPageProps) {
   const resolvedParams = await params;
   
-  // URL parameters come in encoded, decode them for matching
-  const productName = decodeURIComponent(resolvedParams.productName);
+  // Decode route params before matching data
+  const productName = safeDecodeURIComponent(resolvedParams.productName);
   
   // Find the product by name
   const product = contentData.products.find(
-    (p: Product) => p.name.toLowerCase() === productName.toLowerCase()
-  ) as Product | undefined;
+    (p) => p.name.toLowerCase() === productName.toLowerCase()
+  ) as ProductProp;
 
   return <ProductDetailClient product={product} resolvedParams={resolvedParams} />;
 }
