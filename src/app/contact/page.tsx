@@ -30,65 +30,75 @@ export default function ContactPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError('');
+    setError("");
 
     // Validation
     if (!formData.name.trim()) {
-      setError('Name is required');
+      setError("Name is required");
       return;
     }
-
     if (!formData.email.trim()) {
-      setError('Email is required');
+      setError("Email is required");
       return;
     }
-
     // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
-      setError('Please provide a valid email address');
+      setError("Please provide a valid email address");
       return;
     }
-
     if (!formData.phone.trim()) {
-      setError('Phone number is required');
+      setError("Phone number is required");
       return;
     }
 
     setLoading(true);
 
-    // Use formsubmit.co API
-    try {
-      const response = await fetch('https://formsubmit.co/ajax/gamesaadesh@gmail.com', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json',
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          message: formData.message,
-        }),
-      });
-      const data = await response.json();
-      if (data.success === 'true' || data.success === true) {
-        setSubmitted(true);
-        setShowToast(true);
-        setFormData({ name: '', email: '', phone: '', message: '' });
-        setTimeout(() => {
-          setSubmitted(false);
-          setShowToast(false);
-        }, 4000);
-      } else {
-        setError('Failed to send message. Please try again.');
+    // Send to both emails using two API calls
+    const emails = [
+      "akshay@pppatel.co.in",
+      "marketing@pppatel.com"
+    ];
+    let allSuccess = true;
+    let lastError = "";
+    for (const email of emails) {
+      try {
+        const response = await fetch(`https://formsubmit.co/ajax/${email}`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            message: formData.message,
+          }),
+        });
+        const data = await response.json();
+        if (!(data.success === "true" || data.success === true)) {
+          allSuccess = false;
+          lastError = data.message || "Failed to send message. Please try again.";
+        }
+      } catch (err) {
+        allSuccess = false;
+        lastError = "Failed to send message. Please try again later.";
       }
-    } catch (err) {
-      setError('Failed to send message. Please try again later.');
-    } finally {
-      setLoading(false);
     }
+
+    if (allSuccess) {
+      setSubmitted(true);
+      setShowToast(true);
+      setFormData({ name: "", email: "", phone: "", message: "" });
+      setTimeout(() => {
+        setSubmitted(false);
+        setShowToast(false);
+      }, 4000);
+    } else {
+      setError(lastError);
+    }
+    setLoading(false);
   };
 
   const [content, setContent] = useState(contentData);
@@ -160,9 +170,9 @@ export default function ContactPage() {
                   name="name"
                   required
                   value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  onChange={e => setFormData({ ...formData, name: e.target.value })}
                   className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#262f68] focus:border-transparent"
-                  placeholder="Your name"
+                  placeholder="Your Name"
                 />
               </div>
               <div>
@@ -174,7 +184,7 @@ export default function ContactPage() {
                   name="email"
                   required
                   value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  onChange={e => setFormData({ ...formData, email: e.target.value })}
                   className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#262f68] focus:border-transparent"
                   placeholder="your.email@example.com"
                 />
@@ -188,7 +198,7 @@ export default function ContactPage() {
                   name="phone"
                   required
                   value={formData.phone}
-                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                  onChange={e => setFormData({ ...formData, phone: e.target.value })}
                   className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#262f68] focus:border-transparent"
                   placeholder="+91-XXXXXXXXXX"
                 />
@@ -201,7 +211,7 @@ export default function ContactPage() {
                   name="message"
                   rows={6}
                   value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  onChange={e => setFormData({ ...formData, message: e.target.value })}
                   className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#262f68] focus:border-transparent"
                   placeholder="Your message (optional)"
                 />
