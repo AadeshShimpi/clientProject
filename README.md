@@ -143,3 +143,40 @@ For questions or issues, please refer to the Next.js documentation or create an 
 ## License
 
 This project is open source and available for your use.
+
+---
+
+## Adiaksh Solutions — Company Presentation Deck
+
+### What the Deck Is For
+
+`Adiaksh_Solutions_Company_Deck.pptx` is a professional 10-slide PowerPoint presentation for **Adiaksh Solutions** (adiakshsolutions.com) designed to present the company's roles, responsibilities, capabilities, and engagement models to potential clients.
+
+### How to Regenerate the Deck
+
+1. Install the dependency (one-time):
+   ```bash
+   pip install python-pptx
+   ```
+2. Run the generation script:
+   ```bash
+   python generate_deck.py
+   ```
+3. Open `Adiaksh_Solutions_Company_Deck.pptx` in Microsoft PowerPoint or Google Slides.
+
+### Slide Structure
+
+| # | Slide Title | Description |
+|---|-------------|-------------|
+| 1 | Cover | Company name, tagline, services list, location |
+| 2 | About Us | Company overview, mission, key stats |
+| 3 | Our Role & Responsibilities | Strategic Partner, Full SDLC, Quality, Support |
+| 4 | Core Services | Web, Mobile, AI, Cloud, UX/UI, Product Engineering |
+| 5 | Technical Capabilities & Stack | Frontend, Backend, Mobile, AI/ML, Cloud, Databases |
+| 6 | Why Partner With Us | 6 differentiators with accent bar design |
+| 7 | Our Engagement & Delivery Process | 6-step numbered delivery flow |
+| 8 | Industries We Serve | 8 industry verticals |
+| 9 | Engagement Models | Fixed Price, T&M, Dedicated Team |
+| 10 | Call to Action / Contact | Website, locations, closing message |
+
+**Branding:** Deep navy (`#0A1F44`) + bright blue (`#008BFF`) on light-gray backgrounds with white text on dark bars.
